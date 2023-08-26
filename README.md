@@ -13,3 +13,8 @@ SideBar component
 
 Key Point:
 1.Can't put <Link/> component between <MenuItem></MenuItem>, for instance:<MenuItem><Link/></MenuItem>, this will cause "Warning: validateDOMNesting(…): <a> cannot appear as a descendant of <a>" error. The solution is <MenuItem component={<Link to={to} />}></MenuItem>
+
+<html>
+    <body>
+    </body>
+</html>
