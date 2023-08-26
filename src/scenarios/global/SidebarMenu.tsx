@@ -165,7 +165,7 @@ const SidebarMenu = () => {
             {/**Invoices Balances */}
             <Item
               title="Invoices Balances"
-              to="/invoices"
+              to="/invocies"
               icon={<ReceiptOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
