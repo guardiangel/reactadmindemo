@@ -56,26 +56,21 @@ const SidebarMenu = () => {
 
   return (
     <Box
-      bgcolor={colors.grey[900]}
-      sx={
-        {
-          /* "& Sidebar": {
+      sx={{
+        "& .ps-sidebar-container": {
           background: `${colors.primary[400]} !important`,
         },
-        "& .pro-icon-wrapper": {
-          backgroundColor: "transparent !important",
-        },
-        "& .pro-inner-item": {
+
+        "& .ps-menuitem-root": {
           padding: "5px 35px 5px 20px !important",
         },
-        "& .pro-inner-item:hover": {
+        "& .ps-menuitem-root:hover": {
           color: "#868dfb !important",
         },
-        "& .pro-menu-item.active": {
+        "& .ps-menuitem-root.active": {
           color: "#6870fa !important",
-        }, */
-        }
-      }
+        },
+      }}
     >
       <Sidebar
         collapsed={collapsedFlag}
@@ -142,7 +137,7 @@ const SidebarMenu = () => {
           )}
 
           {/**menu items */}
-          <Box paddingLeft={collapsedFlag ? undefined : "10%"} sx={{}}>
+          <Box paddingLeft={collapsedFlag ? undefined : "10%"}>
             {/**Dashboard */}
             <Item
               title="Dashboard"
