@@ -1,5 +1,5 @@
 import React, { ReactNode, useState } from "react";
-import { Sidebar, Menu, MenuItem, MenuItemFR } from "react-pro-sidebar";
+import { Sidebar, Menu, MenuItem } from "react-pro-sidebar";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import PeopleOutlinedIcon from "@mui/icons-material/PeopleOutlined";
 import ContactsOutlinedIcon from "@mui/icons-material/ContactsOutlined";
@@ -27,11 +27,11 @@ interface ItemType {
 
 const Item = ({ title, to, icon, selected, setSelected }: ItemType) => {
   const theme = useTheme();
-  const colors = colorTokens(theme.palette.grey[100]);
+  const colors = colorTokens(theme.palette.mode);
   return (
     <MenuItem
       active={selected === title}
-      style={{ color: colors.greenAccent[100] }}
+      style={{ color: colors.blueAccent[500] }}
       onClick={() => setSelected(title)}
       icon={icon}
       //look like we can't put <Link to={to} /> between <MenuItem></MenuItem>,
@@ -41,7 +41,7 @@ const Item = ({ title, to, icon, selected, setSelected }: ItemType) => {
       //guiquansun 20230825
       component={<Link to={to} />}
     >
-      <Typography>{title}</Typography>
+      <Typography sx={{ fontSize: 18 }}>{title}</Typography>
     </MenuItem>
   );
 };
@@ -55,11 +55,34 @@ const SidebarMenu = () => {
   const [selected, setSelected] = useState<string>("Dashboard");
 
   return (
-    <Box>
+    <Box
+      bgcolor={colors.grey[900]}
+      sx={
+        {
+          /* "& Sidebar": {
+          background: `${colors.primary[400]} !important`,
+        },
+        "& .pro-icon-wrapper": {
+          backgroundColor: "transparent !important",
+        },
+        "& .pro-inner-item": {
+          padding: "5px 35px 5px 20px !important",
+        },
+        "& .pro-inner-item:hover": {
+          color: "#868dfb !important",
+        },
+        "& .pro-menu-item.active": {
+          color: "#6870fa !important",
+        }, */
+        }
+      }
+    >
       <Sidebar
         collapsed={collapsedFlag}
         transitionDuration={1000}
-        rootStyles={{ height: "100%" }}
+        rootStyles={{
+          height: "100%",
+        }}
       >
         <Menu>
           <MenuItem
@@ -119,7 +142,7 @@ const SidebarMenu = () => {
           )}
 
           {/**menu items */}
-          <Box paddingLeft={collapsedFlag ? undefined : "10%"}>
+          <Box paddingLeft={collapsedFlag ? undefined : "10%"} sx={{}}>
             {/**Dashboard */}
             <Item
               title="Dashboard"

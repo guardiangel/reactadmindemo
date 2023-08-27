@@ -1,6 +1,6 @@
 import { colorTokens } from "../theme";
 
-export const mockDataTeam = [
+export const mockUserDataTeam = [
   {
     id: 1,
     name: "Jon Snow",
