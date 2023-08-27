@@ -96,8 +96,9 @@ const Team = () => {
           },
           //defined in the above columns
           "& .name-column-cell": {
-            color: colors.greenAccent[200],
+            color: colors.redAccent[200],
           },
+
           "& .MuiDataGrid-columnHeaders": {
             backgroundColor: colors.blueAccent[700],
             borderBottom: "none",
@@ -119,7 +120,7 @@ const Team = () => {
           columns={columns}
           initialState={{
             pagination: {
-              paginationModel: { pageSize: 10, page: 0 },
+              paginationModel: { pageSize: 25, page: 0 },
             },
           }}
         />

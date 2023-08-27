@@ -31,7 +31,7 @@ const Item = ({ title, to, icon, selected, setSelected }: ItemType) => {
   return (
     <MenuItem
       active={selected === title}
-      style={{ color: colors.blueAccent[500] }}
+      style={{ color: colors.grey[100] }}
       onClick={() => setSelected(title)}
       icon={icon}
       //look like we can't put <Link to={to} /> between <MenuItem></MenuItem>,
@@ -41,7 +41,7 @@ const Item = ({ title, to, icon, selected, setSelected }: ItemType) => {
       //guiquansun 20230825
       component={<Link to={to} />}
     >
-      <Typography sx={{ fontSize: 18 }}>{title}</Typography>
+      <Typography sx={{ fontSize: 16 }}>{title}</Typography>
     </MenuItem>
   );
 };
@@ -56,18 +56,21 @@ const SidebarMenu = () => {
 
   return (
     <Box
+      // the below css style comes from browser console
+      //ctrl+shift+i: open browser console
+      //click the italic arrow in the left top corner
+      //click whatever element in the page to get the class
       sx={{
         "& .ps-sidebar-container": {
           background: `${colors.primary[400]} !important`,
         },
-
-        "& .ps-menuitem-root": {
-          padding: "5px 35px 5px 20px !important",
+        "& .MuiTypography-root": {
+          padding: "5px 10px 5px 0px !important",
         },
-        "& .ps-menuitem-root:hover": {
+        "& .MuiTypography-root:hover": {
           color: "#868dfb !important",
         },
-        "& .ps-menuitem-root.active": {
+        "& .MuiTypography-root.active": {
           color: "#6870fa !important",
         },
       }}
@@ -77,6 +80,7 @@ const SidebarMenu = () => {
         transitionDuration={1000}
         rootStyles={{
           height: "100%",
+          width: "100%",
         }}
       >
         <Menu>
