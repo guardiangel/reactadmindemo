@@ -1,6 +1,6 @@
 import { createContext, useState, useMemo } from "react";
 import { PaletteMode, createTheme } from "@mui/material";
-import { ThemeOptions } from "@mui/material/styles";
+import { Theme, ThemeOptions } from "@mui/material/styles";
 
 //colors used. Install "Tailwind Shades" from Extneds on the left menu bar. macOS: cmd+k cmd+g
 //Others: ctrl+k ctrl+g
@@ -201,18 +201,18 @@ export const ColorModeContext = createContext({
   toggleColorMode: () => {},
 });
 
-export const useMode = (): any => {
+export const useMode = (): (ThemeOptions | any)[] => {
   const [mode, setMode] = useState<PaletteMode>("dark");
 
   // the light and dark are defined in PaletteMode component
   const colorMode = useMemo(
     () => ({
-      toggleColorMode: () =>
-        setMode((prev) => (prev === "light" ? "dark" : "light")),
+      toggleColorMode: (): void =>
+        setMode((prev: PaletteMode) => (prev === "light" ? "dark" : "light")),
     }),
     []
   );
 
-  const theme = useMemo(() => createTheme(themeSettings(mode)), [mode]);
+  const theme = useMemo<Theme>(() => createTheme(themeSettings(mode)), [mode]);
   return [theme, colorMode];
 };

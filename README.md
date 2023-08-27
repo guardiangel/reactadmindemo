@@ -1,3 +1,5 @@
+React/Mui/
+
 Day 1:
 1.Create App
 yarn create react-app . --template typescript
@@ -14,7 +16,6 @@ SideBar component
 Key Point:
 1.Can't put <Link/> component between <MenuItem></MenuItem>, for instance:<MenuItem><Link/></MenuItem>, this will cause "Warning: validateDOMNesting(…): <a> cannot appear as a descendant of <a>" error. The solution is <MenuItem component={<Link to={to} />}></MenuItem>
 
-<html>
-    <body>
-    </body>
-</html>
+Day 3:
+Tables:
+Team/Invocies/Contacts:
