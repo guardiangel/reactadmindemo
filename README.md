@@ -1,4 +1,5 @@
-React/Mui/
+Technology:
+React/Mui/Formic/yup/React-Pro-Sidebar/
 
 Day 1:
 1.Create App

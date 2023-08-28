@@ -9,7 +9,7 @@ import Team from "./scenarios/team/Team";
 import Invoices from "./scenarios/invoices/Invoices";
 import Contacts from "./scenarios/contacts/Contacts";
 import Bar from "./scenarios/bar/Bar";
-import Form from "./scenarios/form/Form";
+import Form from "./scenarios/form/UserForm";
 import Line from "./scenarios/line/Line";
 import Pie from "./scenarios/pie/Pie";
 import FAQ from "./scenarios/faq/FAQ";
