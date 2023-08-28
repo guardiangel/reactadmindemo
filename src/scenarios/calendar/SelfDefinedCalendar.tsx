@@ -1,10 +1,6 @@
 import React, { useState } from "react";
 import FullCalendar from "@fullcalendar/react";
-import CalendarApi, {
-  Calendar,
-  EventApi,
-  formatDate,
-} from "@fullcalendar/core";
+import { formatDate } from "@fullcalendar/core";
 import dayGridPlugin from "@fullcalendar/daygrid"; // a plugin!
 import timeGridPlugin from "@fullcalendar/timegrid"; // a plugin!
 import listPlugin from "@fullcalendar/list";
