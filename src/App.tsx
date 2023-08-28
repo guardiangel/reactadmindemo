@@ -14,7 +14,7 @@ import Line from "./scenarios/line/Line";
 import Pie from "./scenarios/pie/Pie";
 import FAQ from "./scenarios/faq/FAQ";
 import Geograpy from "./scenarios/geograpy/Geograpy";
-import Calendar from "./scenarios/calendar/Calendar";
+import Calendar from "./scenarios/calendar/SelfDefinedCalendar";
 import { Route, Routes } from "react-router-dom";
 
 function App() {
