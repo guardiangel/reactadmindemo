@@ -22,6 +22,11 @@ Tables:
 Team/Invocies/Contacts:
 
 Day 4:
-Calendar/FAQ/BarChart
+Calendar/FAQ/BarChart/PieChart/LineChart/GeographyChart
 Charts:
 https://nivo.rocks/
+
+Key point:
+In the GeographyChart component, the data is too large, so the rendering process will probably execute first before getting data from data file or data source, and this will cause some undefined exception.
+
+Solution: Use a state. Only rendering the page after getting data.

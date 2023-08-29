@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { ResponsiveBar } from "@nivo/bar";
 import axios from "axios";
 import { useTheme } from "@mui/material";
-import { colorTokens } from "../../theme";
+import { colorTokens } from "../theme";
 
 //import { barCharData } from "../../data/userData";
 
@@ -13,7 +13,7 @@ const BarchartHelper = ({ isDashBoard = false }) => {
 
   //There are two different way to use Bar Chart data, here we use axios for demo.
   useEffect(() => {
-    axios.get("/db/barChar.json").then((res) => {
+    axios.get("/db/barChart.json").then((res) => {
       setBarData(res.data);
     });
   }, []);

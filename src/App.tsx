@@ -10,10 +10,10 @@ import Invoices from "./scenarios/invoices/Invoices";
 import Contacts from "./scenarios/contacts/Contacts";
 import Form from "./scenarios/form/UserForm";
 import BarChart from "./scenarios/bar/BarChart";
-import Line from "./scenarios/line/Line";
-import Pie from "./scenarios/pie/Pie";
+import Line from "./scenarios/line/LineChart";
+import PieChart from "./scenarios/pie/PieChart";
 import FAQ from "./scenarios/faq/FAQ";
-import Geograpy from "./scenarios/geograpy/Geograpy";
+import GeograpyChart from "./scenarios/geograpy/GeograpyChart";
 import Calendar from "./scenarios/calendar/SelfDefinedCalendar";
 import { Route, Routes } from "react-router-dom";
 
@@ -35,10 +35,10 @@ function App() {
                 <Route path="/invocies" element={<Invoices />} />
                 <Route path="/form" element={<Form />} />
                 <Route path="/bar" element={<BarChart />} />
-                <Route path="/pie" element={<Pie />} />
+                <Route path="/pie" element={<PieChart />} />
                 <Route path="/line" element={<Line />} />
                 <Route path="/faq" element={<FAQ />} />
-                <Route path="/geography" element={<Geograpy />} />
+                <Route path="/geography" element={<GeograpyChart />} />
                 <Route path="/calendar" element={<Calendar />} />
               </Routes>
             </main>
