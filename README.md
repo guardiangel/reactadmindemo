@@ -1,5 +1,9 @@
-Technology:
-React/Mui/Formic/yup/React-Pro-Sidebar/fullcalendar
+1.Demo image
+![alt text](image.png)
+2.Technology:
+React/Mui/Formic/yup/React-Pro-Sidebar/fullcalendar/axios
+3.Start server:
+yarn start
 
 Day 1:
 1.Create App
@@ -30,3 +34,6 @@ Key point:
 In the GeographyChart component, the data is too large, so the rendering process will probably execute first before getting data from data file or data source, and this will cause some undefined exception.
 
 Solution: Use a state. Only rendering the page after getting data.
+
+Day 5:
+Dashboard
