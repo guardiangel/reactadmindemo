@@ -8,8 +8,8 @@ import Dashboard from "./scenarios/dashboard/Dashboard";
 import Team from "./scenarios/team/Team";
 import Invoices from "./scenarios/invoices/Invoices";
 import Contacts from "./scenarios/contacts/Contacts";
-import Bar from "./scenarios/bar/Bar";
 import Form from "./scenarios/form/UserForm";
+import BarChart from "./scenarios/bar/BarChart";
 import Line from "./scenarios/line/Line";
 import Pie from "./scenarios/pie/Pie";
 import FAQ from "./scenarios/faq/FAQ";
@@ -34,7 +34,7 @@ function App() {
                 <Route path="/contacts" element={<Contacts />} />
                 <Route path="/invocies" element={<Invoices />} />
                 <Route path="/form" element={<Form />} />
-                <Route path="/bar" element={<Bar />} />
+                <Route path="/bar" element={<BarChart />} />
                 <Route path="/pie" element={<Pie />} />
                 <Route path="/line" element={<Line />} />
                 <Route path="/faq" element={<FAQ />} />
