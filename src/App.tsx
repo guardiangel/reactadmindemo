@@ -10,12 +10,12 @@ import Invoices from "./scenarios/invoices/Invoices";
 import Contacts from "./scenarios/contacts/Contacts";
 import Form from "./scenarios/form/UserForm";
 import BarChart from "./scenarios/bar/BarChart";
-import Line from "./scenarios/line/LineChart";
 import PieChart from "./scenarios/pie/PieChart";
 import FAQ from "./scenarios/faq/FAQ";
 import GeograpyChart from "./scenarios/geograpy/GeograpyChart";
 import Calendar from "./scenarios/calendar/SelfDefinedCalendar";
 import { Route, Routes } from "react-router-dom";
+import LineChart from "./scenarios/line/LineChart";
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -36,7 +36,7 @@ function App() {
                 <Route path="/form" element={<Form />} />
                 <Route path="/bar" element={<BarChart />} />
                 <Route path="/pie" element={<PieChart />} />
-                <Route path="/line" element={<Line />} />
+                <Route path="/line" element={<LineChart />} />
                 <Route path="/faq" element={<FAQ />} />
                 <Route path="/geography" element={<GeograpyChart />} />
                 <Route path="/calendar" element={<Calendar />} />
